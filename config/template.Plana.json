@@ -1,0 +1,23 @@
+{
+  "Plana": {
+    "PlanaEmulator": {
+      "Serial": "127.0.0.1:16416",
+      "PackageName": "YoStarJP",
+      "ScreenshotMethod": "DroidCast_raw",
+      "TouchMethod": "minitouch"
+    },
+    "Emulator": {
+      "ServerName": "disabled"
+    },
+    "Error": {
+      "SaveError": false,
+      "OnePushConfig": "provider: null"
+    },
+    "Optimization": {
+      "WhenTaskQueueEmpty": "stay_there"
+    },
+    "Storage": {
+      "Storage": {}
+    }
+  }
+}

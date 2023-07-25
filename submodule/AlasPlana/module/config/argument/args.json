@@ -1,0 +1,78 @@
+{
+  "Plana": {
+    "PlanaEmulator": {
+      "Serial": {
+        "type": "input",
+        "value": "127.0.0.1:16416",
+        "valuetype": "str"
+      },
+      "PackageName": {
+        "type": "select",
+        "value": "YoStarJP",
+        "option": [
+          "YoStarJP"
+        ]
+      },
+      "ScreenshotMethod": {
+        "type": "select",
+        "value": "DroidCast_raw",
+        "option": [
+          "auto",
+          "ADB",
+          "ADB_nc",
+          "uiautomator2",
+          "aScreenCap",
+          "aScreenCap_nc",
+          "DroidCast",
+          "DroidCast_raw",
+          "scrcpy"
+        ]
+      },
+      "TouchMethod": {
+        "type": "select",
+        "value": "minitouch",
+        "option": [
+          "ADB",
+          "uiautomator2",
+          "minitouch",
+          "Hermit"
+        ]
+      }
+    },
+    "Emulator": {
+      "ServerName": {
+        "type": "input",
+        "value": "disabled",
+        "display": "hide"
+      }
+    },
+    "Error": {
+      "SaveError": {
+        "type": "checkbox",
+        "value": false,
+        "display": "hide"
+      },
+      "OnePushConfig": {
+        "type": "input",
+        "value": "provider: null",
+        "mode": "yaml",
+        "display": "hide"
+      }
+    },
+    "Optimization": {
+      "WhenTaskQueueEmpty": {
+        "type": "input",
+        "value": "stay_there",
+        "display": "hide"
+      }
+    },
+    "Storage": {
+      "Storage": {
+        "type": "storage",
+        "value": {},
+        "valuetype": "ignore",
+        "display": "disabled"
+      }
+    }
+  }
+}

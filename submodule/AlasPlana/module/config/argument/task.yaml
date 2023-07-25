@@ -1,0 +1,15 @@
+# --------------------
+# Define argument group of tasks.
+# --------------------
+
+# ==================== Plana ====================
+
+Plana:
+  menu: 'list'
+  page: 'setting'
+  tasks:
+    Plana:
+      - PlanaEmulator
+      - Emulator
+      - Error
+      - Optimization

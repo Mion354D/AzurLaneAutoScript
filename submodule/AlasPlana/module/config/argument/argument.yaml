@@ -1,0 +1,55 @@
+# --------------------
+# Define arguments.
+# --------------------
+
+# ==================== Base ====================
+Scheduler:
+  Enable: false
+  NextRun: 2020-01-01 03:00:00
+  Command: Plana
+  SuccessInterval:
+    value: 60
+    display: hide
+  FailureInterval:
+    value: 120
+    display: hide
+  ServerUpdate:
+    value: 03:00
+    display: hide
+
+# TODO: check if able to remove this
+Emulator:
+  ServerName:
+    value: disabled
+    display: hide
+
+Error:
+  SaveError:
+    value: false
+    display: hide
+  OnePushConfig:
+    mode: yaml
+    value: 'provider: null'
+    display: hide
+
+Optimization:
+  WhenTaskQueueEmpty:
+    value: stay_there
+    display: hide
+
+
+
+# ==================== Plana ====================
+PlanaEmulator:
+  Serial:
+    value: 127.0.0.1:16416
+    valuetype: str
+  PackageName:
+    value: YoStarJP
+    option: [ YoStarJP ]
+  ScreenshotMethod:
+    value: DroidCast_raw
+    option: [ auto, ADB, ADB_nc, uiautomator2, aScreenCap, aScreenCap_nc, DroidCast, DroidCast_raw, scrcpy ]
+  TouchMethod:
+    value: minitouch
+    option: [ ADB, uiautomator2, minitouch, Hermit ]
