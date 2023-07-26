@@ -18,10 +18,10 @@ class PlanaConfig(AzurLaneConfig, ConfigUpdater, GeneratedConfig):
 
     def bind(self, func, func_set=None):
         if func_set is None:
-            func_set = {'Maa'}
+            func_set = {'Plana'}
         super().bind(func, func_set)
 
-    def save(self, mod_name='maa'):
+    def save(self, mod_name='Plana'):
         super().save(mod_name)
 
     def get_mtime(self):
