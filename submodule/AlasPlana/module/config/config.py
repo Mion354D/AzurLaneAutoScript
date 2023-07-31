@@ -11,21 +11,21 @@ class PlanaConfig(AzurLaneConfig, ConfigUpdater, GeneratedConfig):
     def __init__(self, config_name, task=None):
         super().__init__(config_name, task)
         if task is None:
-            task = name_to_function("Plana")
+            task = name_to_function("plana")
             self.bind(task)
             self.task = task
             self.save()
 
     def bind(self, func, func_set=None):
         if func_set is None:
-            func_set = {'Plana'}
+            func_set = {'plana'}
         super().bind(func, func_set)
 
-    def save(self, mod_name='Plana'):
+    def save(self, mod_name='plana'):
         super().save(mod_name)
 
     def get_mtime(self):
-        timestamp = os.stat(filepath_config(self.config_name, mod_name='Plana')).st_mtime
+        timestamp = os.stat(filepath_config(self.config_name, mod_name='plana')).st_mtime
         mtime = datetime.fromtimestamp(timestamp).replace(microsecond=0)
         return mtime
 

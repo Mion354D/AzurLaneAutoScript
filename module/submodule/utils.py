@@ -1,15 +1,18 @@
 import os
 
+from module.logger import logger
+
 MOD_DICT = {
     'maa': 'AlasMaaBridge',
     'fpy': 'AlasFpyBridge',
-    'Plana': 'AlasPlana',
+    'plana': 'AlasPlana',
 }
 MOD_FUNC_DICT = {
     'MaaCopilot': 'maa',
     'FpyBattle': 'fpy',
     'FpyBenchmark': 'fpy',
     'FpyCall': 'fpy',
+    'PlanaCapTool': 'plana',
 }
 MOD_CONFIG_DICT = {}
 

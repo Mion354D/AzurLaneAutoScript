@@ -17,11 +17,24 @@ Scheduler:
     value: 03:00
     display: hide
 
-# TODO: check if able to remove this
 Emulator:
+  Serial:
+    value: auto
+    valuetype: str
+  PackageName:
+    value: JP
+    option: [ JP, ]
   ServerName:
     value: disabled
-    display: hide
+    option: [ disabled, ]
+  ScreenshotMethod:
+    value: auto
+    option: [ auto, ADB, ADB_nc, uiautomator2, aScreenCap, aScreenCap_nc, DroidCast, DroidCast_raw, scrcpy ]
+  ControlMethod:
+    value: minitouch
+    option: [ ADB, uiautomator2, minitouch, Hermit, MaaTouch ]
+  ScreenshotDedithering: false
+  AdbRestart: false
 
 Error:
   SaveError:
@@ -40,16 +53,25 @@ Optimization:
 
 
 # ==================== Plana ====================
-PlanaEmulator:
-  Serial:
-    value: 127.0.0.1:16416
+#PlanaEmulator:
+#  Serial:
+#    value: 127.0.0.1:16416
+#    valuetype: str
+#  PackageName:
+#    value: YoStarJP
+#    option: [ YoStarJP ]
+#  ScreenshotMethod:
+#    value: DroidCast_raw
+#    option: [ auto, ADB, ADB_nc, uiautomator2, aScreenCap, aScreenCap_nc, DroidCast, DroidCast_raw, scrcpy ]
+#  TouchMethod:
+#    value: minitouch
+#    option: [ ADB, uiautomator2, minitouch, Hermit ]
+
+CapTool:
+  SavedPath:
+    value: C:\Users\mion\Desktop\ws\AzurLaneAutoScript\submodule\AlasPlana\assets
     valuetype: str
-  PackageName:
-    value: YoStarJP
-    option: [ YoStarJP ]
-  ScreenshotMethod:
-    value: DroidCast_raw
-    option: [ auto, ADB, ADB_nc, uiautomator2, aScreenCap, aScreenCap_nc, DroidCast, DroidCast_raw, scrcpy ]
-  TouchMethod:
-    value: minitouch
-    option: [ ADB, uiautomator2, minitouch, Hermit ]
+  SaveUncroppedImage:
+    value: true
+  CloseWindowAfterCropping:
+    value: false

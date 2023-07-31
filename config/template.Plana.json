@@ -1,13 +1,13 @@
 {
   "Plana": {
-    "PlanaEmulator": {
-      "Serial": "127.0.0.1:16416",
-      "PackageName": "YoStarJP",
-      "ScreenshotMethod": "DroidCast_raw",
-      "TouchMethod": "minitouch"
-    },
     "Emulator": {
-      "ServerName": "disabled"
+      "Serial": "auto",
+      "PackageName": "JP",
+      "ServerName": "disabled",
+      "ScreenshotMethod": "auto",
+      "ControlMethod": "minitouch",
+      "ScreenshotDedithering": false,
+      "AdbRestart": false
     },
     "Error": {
       "SaveError": false,
@@ -15,6 +15,16 @@
     },
     "Optimization": {
       "WhenTaskQueueEmpty": "stay_there"
+    },
+    "Storage": {
+      "Storage": {}
+    }
+  },
+  "PlanaCapTool": {
+    "CapTool": {
+      "SavedPath": "C:\\Users\\mion\\Desktop\\ws\\AzurLaneAutoScript\\submodule\\AlasPlana\\assets",
+      "SaveUncroppedImage": true,
+      "CloseWindowAfterCropping": false
     },
     "Storage": {
       "Storage": {}

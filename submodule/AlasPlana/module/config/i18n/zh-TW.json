@@ -3,12 +3,20 @@
     "Plana": {
       "name": "Menu.Plana.name",
       "help": "Menu.Plana.help"
+    },
+    "Tools": {
+      "name": "Menu.Tools.name",
+      "help": "Menu.Tools.help"
     }
   },
   "Task": {
     "Plana": {
       "name": "Task.Plana.name",
       "help": "Task.Plana.help"
+    },
+    "PlanaCapTool": {
+      "name": "Task.PlanaCapTool.name",
+      "help": "Task.PlanaCapTool.help"
     }
   },
   "Scheduler": {
@@ -46,9 +54,49 @@
       "name": "Emulator._info.name",
       "help": "Emulator._info.help"
     },
+    "Serial": {
+      "name": "Emulator.Serial.name",
+      "help": "Emulator.Serial.help"
+    },
+    "PackageName": {
+      "name": "Emulator.PackageName.name",
+      "help": "Emulator.PackageName.help",
+      "JP": "JP"
+    },
     "ServerName": {
       "name": "Emulator.ServerName.name",
-      "help": "Emulator.ServerName.help"
+      "help": "Emulator.ServerName.help",
+      "disabled": "disabled"
+    },
+    "ScreenshotMethod": {
+      "name": "Emulator.ScreenshotMethod.name",
+      "help": "Emulator.ScreenshotMethod.help",
+      "auto": "auto",
+      "ADB": "ADB",
+      "ADB_nc": "ADB_nc",
+      "uiautomator2": "uiautomator2",
+      "aScreenCap": "aScreenCap",
+      "aScreenCap_nc": "aScreenCap_nc",
+      "DroidCast": "DroidCast",
+      "DroidCast_raw": "DroidCast_raw",
+      "scrcpy": "scrcpy"
+    },
+    "ControlMethod": {
+      "name": "Emulator.ControlMethod.name",
+      "help": "Emulator.ControlMethod.help",
+      "ADB": "ADB",
+      "uiautomator2": "uiautomator2",
+      "minitouch": "minitouch",
+      "Hermit": "Hermit",
+      "MaaTouch": "MaaTouch"
+    },
+    "ScreenshotDedithering": {
+      "name": "Emulator.ScreenshotDedithering.name",
+      "help": "Emulator.ScreenshotDedithering.help"
+    },
+    "AdbRestart": {
+      "name": "Emulator.AdbRestart.name",
+      "help": "Emulator.AdbRestart.help"
     }
   },
   "Error": {
@@ -75,40 +123,22 @@
       "help": "Optimization.WhenTaskQueueEmpty.help"
     }
   },
-  "PlanaEmulator": {
+  "CapTool": {
     "_info": {
-      "name": "PlanaEmulator._info.name",
-      "help": "PlanaEmulator._info.help"
+      "name": "CapTool._info.name",
+      "help": "CapTool._info.help"
     },
-    "Serial": {
-      "name": "PlanaEmulator.Serial.name",
-      "help": "PlanaEmulator.Serial.help"
+    "SavedPath": {
+      "name": "CapTool.SavedPath.name",
+      "help": "CapTool.SavedPath.help"
     },
-    "PackageName": {
-      "name": "PlanaEmulator.PackageName.name",
-      "help": "PlanaEmulator.PackageName.help",
-      "YoStarJP": "YoStarJP"
+    "SaveUncroppedImage": {
+      "name": "CapTool.SaveUncroppedImage.name",
+      "help": "CapTool.SaveUncroppedImage.help"
     },
-    "ScreenshotMethod": {
-      "name": "PlanaEmulator.ScreenshotMethod.name",
-      "help": "PlanaEmulator.ScreenshotMethod.help",
-      "auto": "auto",
-      "ADB": "ADB",
-      "ADB_nc": "ADB_nc",
-      "uiautomator2": "uiautomator2",
-      "aScreenCap": "aScreenCap",
-      "aScreenCap_nc": "aScreenCap_nc",
-      "DroidCast": "DroidCast",
-      "DroidCast_raw": "DroidCast_raw",
-      "scrcpy": "scrcpy"
-    },
-    "TouchMethod": {
-      "name": "PlanaEmulator.TouchMethod.name",
-      "help": "PlanaEmulator.TouchMethod.help",
-      "ADB": "ADB",
-      "uiautomator2": "uiautomator2",
-      "minitouch": "minitouch",
-      "Hermit": "Hermit"
+    "CloseWindowAfterCropping": {
+      "name": "CapTool.CloseWindowAfterCropping.name",
+      "help": "CapTool.CloseWindowAfterCropping.help"
     }
   },
   "Storage": {

@@ -1,21 +1,28 @@
 {
   "Plana": {
-    "PlanaEmulator": {
+    "Emulator": {
       "Serial": {
         "type": "input",
-        "value": "127.0.0.1:16416",
+        "value": "auto",
         "valuetype": "str"
       },
       "PackageName": {
         "type": "select",
-        "value": "YoStarJP",
+        "value": "JP",
         "option": [
-          "YoStarJP"
+          "JP"
+        ]
+      },
+      "ServerName": {
+        "type": "select",
+        "value": "disabled",
+        "option": [
+          "disabled"
         ]
       },
       "ScreenshotMethod": {
         "type": "select",
-        "value": "DroidCast_raw",
+        "value": "auto",
         "option": [
           "auto",
           "ADB",
@@ -28,22 +35,24 @@
           "scrcpy"
         ]
       },
-      "TouchMethod": {
+      "ControlMethod": {
         "type": "select",
         "value": "minitouch",
         "option": [
           "ADB",
           "uiautomator2",
           "minitouch",
-          "Hermit"
+          "Hermit",
+          "MaaTouch"
         ]
-      }
-    },
-    "Emulator": {
-      "ServerName": {
-        "type": "input",
-        "value": "disabled",
-        "display": "hide"
+      },
+      "ScreenshotDedithering": {
+        "type": "checkbox",
+        "value": false
+      },
+      "AdbRestart": {
+        "type": "checkbox",
+        "value": false
       }
     },
     "Error": {
@@ -64,6 +73,31 @@
         "type": "input",
         "value": "stay_there",
         "display": "hide"
+      }
+    },
+    "Storage": {
+      "Storage": {
+        "type": "storage",
+        "value": {},
+        "valuetype": "ignore",
+        "display": "disabled"
+      }
+    }
+  },
+  "PlanaCapTool": {
+    "CapTool": {
+      "SavedPath": {
+        "type": "input",
+        "value": "C:\\Users\\mion\\Desktop\\ws\\AzurLaneAutoScript\\submodule\\AlasPlana\\assets",
+        "valuetype": "str"
+      },
+      "SaveUncroppedImage": {
+        "type": "checkbox",
+        "value": true
+      },
+      "CloseWindowAfterCropping": {
+        "type": "checkbox",
+        "value": false
       }
     },
     "Storage": {

@@ -5,5 +5,12 @@
     "tasks": [
       "Plana"
     ]
+  },
+  "Tools": {
+    "menu": "list",
+    "page": "tool",
+    "tasks": [
+      "PlanaCapTool"
+    ]
   }
 }

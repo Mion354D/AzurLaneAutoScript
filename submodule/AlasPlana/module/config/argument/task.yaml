@@ -9,7 +9,13 @@ Plana:
   page: 'setting'
   tasks:
     Plana:
-      - PlanaEmulator
       - Emulator
       - Error
       - Optimization
+
+Tools:
+  menu: 'list'
+  page: 'tool'
+  tasks:
+    PlanaCapTool:
+      - CapTool

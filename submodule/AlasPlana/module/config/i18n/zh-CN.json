@@ -3,11 +3,19 @@
     "Plana": {
       "name": "Plana",
       "help": ""
+    },
+    "Tools": {
+      "name": "工具",
+      "help": ""
     }
   },
   "Task": {
     "Plana": {
       "name": "Plana设定",
+      "help": ""
+    },
+    "PlanaCapTool": {
+      "name": "assets 创建工具",
       "help": ""
     }
   },
@@ -46,9 +54,49 @@
       "name": "Emulator._info.name",
       "help": "Emulator._info.help"
     },
+    "Serial": {
+      "name": "Emulator.Serial.name",
+      "help": "Emulator.Serial.help"
+    },
+    "PackageName": {
+      "name": "Emulator.PackageName.name",
+      "help": "Emulator.PackageName.help",
+      "JP": "JP"
+    },
     "ServerName": {
       "name": "Emulator.ServerName.name",
-      "help": "Emulator.ServerName.help"
+      "help": "Emulator.ServerName.help",
+      "disabled": "disabled"
+    },
+    "ScreenshotMethod": {
+      "name": "Emulator.ScreenshotMethod.name",
+      "help": "Emulator.ScreenshotMethod.help",
+      "auto": "auto",
+      "ADB": "ADB",
+      "ADB_nc": "ADB_nc",
+      "uiautomator2": "uiautomator2",
+      "aScreenCap": "aScreenCap",
+      "aScreenCap_nc": "aScreenCap_nc",
+      "DroidCast": "DroidCast",
+      "DroidCast_raw": "DroidCast_raw",
+      "scrcpy": "scrcpy"
+    },
+    "ControlMethod": {
+      "name": "Emulator.ControlMethod.name",
+      "help": "Emulator.ControlMethod.help",
+      "ADB": "ADB",
+      "uiautomator2": "uiautomator2",
+      "minitouch": "minitouch",
+      "Hermit": "Hermit",
+      "MaaTouch": "MaaTouch"
+    },
+    "ScreenshotDedithering": {
+      "name": "Emulator.ScreenshotDedithering.name",
+      "help": "Emulator.ScreenshotDedithering.help"
+    },
+    "AdbRestart": {
+      "name": "Emulator.AdbRestart.name",
+      "help": "Emulator.AdbRestart.help"
     }
   },
   "Error": {
@@ -75,40 +123,22 @@
       "help": "Optimization.WhenTaskQueueEmpty.help"
     }
   },
-  "PlanaEmulator": {
+  "CapTool": {
     "_info": {
-      "name": "模拟器设定",
+      "name": "assets 创建工具",
       "help": ""
     },
-    "Serial": {
-      "name": "模拟器 Serial",
+    "SavedPath": {
+      "name": "图片存储路径",
       "help": ""
     },
-    "PackageName": {
-      "name": "服务器",
-      "help": "",
-      "YoStarJP": "日本"
+    "SaveUncroppedImage": {
+      "name": "同时存储截图",
+      "help": "未涂黑的 asset 的原图"
     },
-    "ScreenshotMethod": {
-      "name": "截图方式",
-      "help": "",
-      "auto": "auto",
-      "ADB": "ADB",
-      "ADB_nc": "ADB_nc",
-      "uiautomator2": "uiautomator2",
-      "aScreenCap": "aScreenCap",
-      "aScreenCap_nc": "aScreenCap_nc",
-      "DroidCast": "DroidCast",
-      "DroidCast_raw": "DroidCast_raw",
-      "scrcpy": "scrcpy"
-    },
-    "TouchMethod": {
-      "name": "操作方式",
-      "help": "",
-      "ADB": "ADB",
-      "uiautomator2": "uiautomator2",
-      "minitouch": "minitouch",
-      "Hermit": "Hermit"
+    "CloseWindowAfterCropping": {
+      "name": "剪切结束后关闭窗口",
+      "help": ""
     }
   },
   "Storage": {

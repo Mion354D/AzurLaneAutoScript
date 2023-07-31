@@ -18,7 +18,13 @@ class GeneratedConfig:
     Scheduler_ServerUpdate = '03:00'
 
     # Group `Emulator`
-    Emulator_ServerName = 'disabled'
+    Emulator_Serial = 'auto'
+    Emulator_PackageName = 'JP'  # JP
+    Emulator_ServerName = 'disabled'  # disabled
+    Emulator_ScreenshotMethod = 'auto'  # auto, ADB, ADB_nc, uiautomator2, aScreenCap, aScreenCap_nc, DroidCast, DroidCast_raw, scrcpy
+    Emulator_ControlMethod = 'minitouch'  # ADB, uiautomator2, minitouch, Hermit, MaaTouch
+    Emulator_ScreenshotDedithering = False
+    Emulator_AdbRestart = False
 
     # Group `Error`
     Error_SaveError = False
@@ -27,11 +33,10 @@ class GeneratedConfig:
     # Group `Optimization`
     Optimization_WhenTaskQueueEmpty = 'stay_there'
 
-    # Group `PlanaEmulator`
-    PlanaEmulator_Serial = '127.0.0.1:16416'
-    PlanaEmulator_PackageName = 'YoStarJP'  # YoStarJP
-    PlanaEmulator_ScreenshotMethod = 'DroidCast_raw'  # auto, ADB, ADB_nc, uiautomator2, aScreenCap, aScreenCap_nc, DroidCast, DroidCast_raw, scrcpy
-    PlanaEmulator_TouchMethod = 'minitouch'  # ADB, uiautomator2, minitouch, Hermit
+    # Group `CapTool`
+    CapTool_SavedPath = 'C:\\Users\\mion\\Desktop\\ws\\AzurLaneAutoScript\\submodule\\AlasPlana\\assets'
+    CapTool_SaveUncroppedImage = True
+    CapTool_CloseWindowAfterCropping = False
 
     # Group `Storage`
     Storage_Storage = {}

@@ -63,14 +63,14 @@ class ConfigUpdater(config_updater.ConfigUpdater):
 
     @cached_property
     def args(self):
-        return read_file(filepath_args(mod_name='Plana'))
+        return read_file(filepath_args(mod_name='plana'))
 
     def read_file(self, config_name, is_template=False):
-        old = read_file(filepath_config(config_name, 'Plana'))
+        old = read_file(filepath_config(config_name, 'plana'))
         return self.config_update(old, is_template=is_template)
 
     @staticmethod
-    def write_file(config_name, data, mod_name='Plana'):
+    def write_file(config_name, data, mod_name='plana'):
         write_file(filepath_config(config_name, mod_name), data)
 
     def config_update(self, old, is_template=False):
@@ -116,7 +116,13 @@ if __name__ == '__main__':
     # Ensure running in mod root folder
     import os
 
+    logger.info(1)
+    logger.info(os.getcwd())
+    os.chdir(os.path.join(os.path.dirname(__file__)))
+    # os.chdir('./submodule/AlasPlana/module/config')
     os.chdir('../../')
+    logger.info(2)
     ConfigGenerator().generate()
     os.chdir('../../')
+    logger.info(3)
     ConfigUpdater().update_file('template', is_template=True)
