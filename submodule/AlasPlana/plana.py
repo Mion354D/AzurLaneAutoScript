@@ -48,7 +48,8 @@ def plana_cap_tool(config_name):
     logger.info("here 5.1")
     script = Plana(config_name)
 
-    # Avoid benchmarking.
+    # Set Emulator_screenshotMethod to a value other than 'auto'
+    # to avoid benchmarking.
     script.config.override(
         Emulator_ScreenshotMethod="DroidCast_raw"
     )
