@@ -6,10 +6,12 @@ from tqdm.contrib.concurrent import process_map
 
 from module.base.utils import get_bbox, get_color, image_size, load_image
 from module.config.config_manual import ManualConfig as AzurLaneConfig
-from module.config.server import VALID_SERVER
+# from module.config.server import VALID_SERVER
 from module.logger import logger
 
-MODULE_FOLDER = './module'
+VALID_SERVER = ["jp"]
+
+# MODULE_FOLDER = './module'
 BUTTON_FILE = 'assets.py'
 IMPORT_EXP = """
 from module.base.button import Button
@@ -19,8 +21,8 @@ from module.base.template import Template
 # Don't modify it manually.
 """
 IMPORT_EXP = IMPORT_EXP.strip().split('\n') + ['']
-
-assets_folder = "../assets/"
+MODULE_FOLDER = os.path.abspath(os.path.join(os.path.join(os.path.dirname(__file__), ".."), "module"))
+assets_folder = os.path.abspath(os.path.join(os.path.join(os.path.dirname(__file__), ".."), "assets"))
 
 
 class ImageExtractor:
@@ -36,7 +38,7 @@ class ImageExtractor:
         for server in VALID_SERVER:
             self.load(server)
 
-    def get_file(self, genre='', server='cn'):
+    def get_file(self, genre='', server='jp'):
         for ext in ['.png', '.gif']:
             file = f'{self.name}.{genre}{ext}' if genre else f'{self.name}{ext}'
             file = os.path.join(assets_folder, server, self.module, file).replace('\\', '/')
@@ -77,7 +79,7 @@ class ImageExtractor:
         mean = tuple(np.rint(mean).astype(int))
         return bbox, mean
 
-    def load(self, server='cn'):
+    def load(self, server='jp'):
         file = self.get_file(server=server)
         if os.path.exists(file):
             area, color = self.extract(file)
@@ -97,11 +99,11 @@ class ImageExtractor:
             self.button[server] = button
             self.file[server] = file
         else:
-            logger.attr(server, f'{self.name} not found, use cn server assets')
-            self.area[server] = self.area['cn']
-            self.color[server] = self.color['cn']
-            self.button[server] = self.button['cn']
-            self.file[server] = self.file['cn']
+            logger.attr(server, f'{self.name} not found, use jp server assets')
+            self.area[server] = self.area['jp']
+            self.color[server] = self.color['jp']
+            self.button[server] = self.button['jp']
+            self.file[server] = self.file['jp']
 
     @property
     def expression(self):
@@ -148,7 +150,7 @@ class TemplateExtractor(ImageExtractor):
 class ModuleExtractor:
     def __init__(self, name):
         self.name = name
-        self.folder = os.path.join(assets_folder, 'cn', name)
+        self.folder = os.path.join(assets_folder, 'jp', name)
 
     @staticmethod
     def split(file):
@@ -184,6 +186,7 @@ class ModuleExtractor:
         folder = os.path.join(MODULE_FOLDER, self.name)
         if not os.path.exists(folder):
             os.mkdir(folder)
+        print(self.name)
         with open(os.path.join(folder, BUTTON_FILE), 'w', newline='') as f:
             for text in self.expression:
                 f.write(text + '\n')
@@ -215,10 +218,11 @@ class AssetExtractor:
 
     def __init__(self):
         logger.info('Assets extract')
+        print(assets_folder)
+        modules = [m for m in os.listdir(os.path.join(assets_folder, "jp"))
+                   if os.path.isdir(os.path.join(os.path.join(assets_folder, "jp"), m))]
 
-        modules = [m for m in os.listdir(assets_folder + '/jp')
-                   if os.path.isdir(os.path.join(assets_folder + '/jp', m))]
-
+        print(modules)
         process_map(worker, modules)
 
 
